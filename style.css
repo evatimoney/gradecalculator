@@ -38,6 +38,7 @@ button {
     margin-bottom: 10px;
 }
 
-#percentage, #grade {
+#overallPercentage, #overallGrade {
     font-weight: bold;
 }
+

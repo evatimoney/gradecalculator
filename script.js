@@ -1,27 +1,26 @@
 function calculateGrade() {
-    var studentName = document.getElementById("studentName").value;
-    var totalMarks = parseFloat(document.getElementById("totalMarks").value);
-    var obtainedMarks = parseFloat(document.getElementById("obtainedMarks").value);
+    var assignmentGrade = parseFloat(document.getElementById("assignmentGrade").value);
+    var assignmentPercentage = parseFloat(document.getElementById("assignmentPercentage").value);
     
-    var percentage = (obtainedMarks / totalMarks) * 100;
+    var overallPercentage = assignmentGrade * (assignmentPercentage / 100);
     
-    document.getElementById("percentage").textContent = "Percentage: " + percentage.toFixed(2) + "%";
+    document.getElementById("overallPercentage").textContent = "Overall Percentage: " + overallPercentage.toFixed(2) + "%";
     
-    var grade;
+    var overallGrade;
     
-    if (percentage >= 90) {
-        grade = 'A';
-    } else if (percentage >= 80) {
-        grade = 'B';
-    } else if (percentage >= 70) {
-        grade = 'C';
-    } else if (percentage >= 60) {
-        grade = 'D';
+    if (overallPercentage >= 90) {
+        overallGrade = 'A';
+    } else if (overallPercentage >= 80) {
+        overallGrade = 'B';
+    } else if (overallPercentage >= 70) {
+        overallGrade = 'C';
+    } else if (overallPercentage >= 60) {
+        overallGrade = 'D';
     } else {
-        grade = 'F';
+        overallGrade = 'F';
     }
     
-    document.getElementById("grade").textContent = "Grade: " + grade;
+    document.getElementById("overallGrade").textContent = "Overall Grade: " + overallGrade;
     
     document.getElementById("result").style.display = "block";
 }

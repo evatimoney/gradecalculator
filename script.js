@@ -14,7 +14,7 @@ function calculateGrade() {
         overallGrade = 'B';
     } else if (overallPercentage >= 70) {
         overallGrade = 'C';
-    } else if (overallPercentage >= 60) { 
+    } else if (overallPercentage >= 60) {
         overallGrade = 'D';
     } else {
         overallGrade = 'F';
